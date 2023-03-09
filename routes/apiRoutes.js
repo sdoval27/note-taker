@@ -22,11 +22,11 @@ router.post('/notes', (req, res) =>{
 })
 
 
- router.delete ('/notes/:id', (req, res) =>{
+//  router.delete ('/notes/:id', (req, res) => {
  
-     console.log(req.params.id);
-     
+//      console.log(req.params.id);
+//      con.query('DELETE FROM posts WHERE posts.id = ?', [req.params.id]); 
 
- });
+//  });
 
 module.exports = router;
