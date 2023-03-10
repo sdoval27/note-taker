@@ -2,7 +2,35 @@ const router = require('express').Router();
 const path = require ('path');
 const db = require('../db/db.json');
 const fs = require('fs');
-//const getID = require('../db/userId');
+
+let noteIdArr = [];
+//id generator 
+fs.readFile('./db/db.json', (err, data) => {
+  if (err) {
+    console.log(err);
+    return;
+  }
+  const noteData = JSON.parse(data);
+  for (let i = 0; i < noteData.length; i++) {
+    noteIdArr.push(noteData[i]);
+  }
+});
+
+const generateId = () => {
+  let noteId = Math.floor(Math.random() * 99) + 1;
+  if (noteIdArr.length === 0) {
+    noteIdArr.push(noteId);
+  } else {
+    for (let i = 0; i < noteIdArr.length; i++) {
+      if (noteIdArr[i] === noteId) {
+        noteId = Math.floor(Math.random() * 99) + 1;
+        i = 0;
+      }
+    }
+    noteIdArr.push(noteId);
+  }
+  return noteIdArr[noteIdArr.length - 1];
+};
 
 router.get('/notes', (req, res) => {
     const savedNotes = db;
@@ -13,6 +41,7 @@ router.post('/notes', (req, res) =>{
     const savedNotes = db;
     //empty body info
     const newNote = req.body;
+    req.body.id = generateId();
     //pushes new note into database
     savedNotes.push(newNote);
     console.log(savedNotes);

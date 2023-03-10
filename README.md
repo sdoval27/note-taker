@@ -15,7 +15,7 @@
  This app creates a database for users to write and save notes to reference as needed.
 
 ## Installation:
- Project is deployed on Heroku.
+ This project is deployed on Heroku. Click [here](https://murmuring-headland-81469.herokuapp.com/) to visit the site.
 
 ## Usage:
  Select the '+' button to start a new note and click the floppy disk icon to save. To reference older notes, select them from the sidebar.
@@ -30,5 +30,5 @@
  [MIT](https://opensource.org/licenses/MIT)
 
 ## Questions:
- - Visit my github at: [sdoval27](https://github.com/sdoval27)
- - You can contact me at: na
+ - You can view this project's github repository at: [Note Taker](https://github.com/sdoval27/note-taker)
+ 
