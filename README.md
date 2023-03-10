@@ -18,6 +18,11 @@
  This project is deployed on Heroku. Click [here](https://murmuring-headland-81469.herokuapp.com/) to visit the site.
 
 ## Usage:
+ The landing page should appear as so
+ ![landing](public/assets/images/note-taker-landing.png)
+ select the 'Get Started' button to enter the notes page.
+ The notes page should appear as so:
+ ![notes](public/assets/images/note-page.png)
  Select the '+' button to start a new note and click the floppy disk icon to save. To reference older notes, select them from the sidebar.
 
 ## Contributing:
